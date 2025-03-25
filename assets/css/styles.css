@@ -422,6 +422,7 @@ header {
 
 .home-hero {
     padding: 3rem 0 8rem;
+    overflow: hidden;
 }
 
 .home-hero .swiper-slide {
@@ -632,7 +633,7 @@ header {
 .home-about-ryt img:nth-child(1) {
     position: relative;
     z-index: 3;
-    transform: rotate(-15deg);
+    transform: rotate(-15deg) translateX(20%);
 }
 
 .home-about-ryt img:nth-child(2) {
@@ -640,7 +641,7 @@ header {
     z-index: 1;
     top: 60%;
     left: 0;
-    transform: rotate(10deg);
+    transform: rotate(10deg) translateY(20%);
     opacity: 0.2;
 }
 
@@ -735,6 +736,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    transform: translateX(50%);
 }
 
 .home-menu-btn {
@@ -922,6 +924,7 @@ header {
 .home-video-card {
     width: 100%;
     position: relative;
+    transform: scale(0);
 }
 
 .home-video-thumb {

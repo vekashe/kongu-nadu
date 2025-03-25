@@ -1,12 +1,12 @@
-const lenis = new Lenis();
-// Listen for the scroll event and log the event data
-// lenis.on('scroll', (e) => {
-//     console.log(e);
-// });
-// Use requestAnimationFrame to continuously update the scroll
+const lenis = new Lenis({
+  duration: 1.5, // Duration for smooth scroll
+  smoothWheel: true, // Enable smooth wheel scrolling
+  smoothTouch: true, // Enable smooth touch scrolling (for mobile)
+});
+
 function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
+  lenis.raf(time);
+  requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
 
@@ -131,3 +131,56 @@ el.addEventListener('mousedown', function() {
 el.addEventListener('mouseup', function() {
   el.style.transform = 'perspective(500px) rotateX(0) rotateY(0)'
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to('.home-video-card', {
+  scrollTrigger: {
+    trigger: ".home-video",
+    start: "top bottom",
+    end: "center 100px",
+    scrub: 1.5, // Smoothly scrubs between the start and end values
+  },
+  transform: 'scale(1)',
+});
+
+gsap.to('.heroSwiper', {
+  scrollTrigger: {
+    trigger: ".home-about",
+    start: "top bottom",
+    end: "center 100px",
+    scrub: 1.5, // Smoothly scrubs between the start and end values
+  },
+  y: 300,
+});
+
+gsap.to('.home-menu-ryt', {
+  scrollTrigger: {
+    trigger: ".home-menu",
+    start: "top bottom",
+    end: "center center",
+    scrub: 1.5, // Smoothly scrubs between the start and end values
+  },
+  x: 0,
+});
+
+// gsap.to('.home-about-ryt-img1', {
+//   scrollTrigger: {
+//     start: "top bpttom",
+//     end: "top 100px",
+//     scrub: 1.8, // Smoothly scrubs between the start and end values
+//   },
+//   transform: "rotate(-15deg) translateX(0)",
+// });
