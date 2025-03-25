@@ -184,3 +184,24 @@ gsap.to('.home-menu-ryt', {
 //   },
 //   transform: "rotate(-15deg) translateX(0)",
 // });
+
+
+gsap.to('.home-direction-ryt', {
+  scrollTrigger: {
+    trigger: ".home-direction",
+    start: "top bottom",
+    end: "+=100%",
+    scrub: 1.8, // Smoothly scrubs between the start and end values
+  },
+  transform: "translateY(-50px)",
+});
+
+gsap.to('.home-direction-iframe', {
+  scrollTrigger: {
+    trigger: ".home-direction",
+    start: "top bottom",
+    end: "+=100%",
+    scrub: 1.8, // Smoothly scrubs between the start and end values
+  },
+  transform: "translateY(50px)",
+});

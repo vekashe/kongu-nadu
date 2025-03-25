@@ -1075,6 +1075,7 @@ header {
     border: unset;
     outline: unset;
     filter: grayscale(1);
+    transform: translateY(-100px);
 }
 
 .home-direction-ryt {
@@ -1083,6 +1084,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    transform: translateY(200px);
 }
 
 .home-direction-ryt h2 {
