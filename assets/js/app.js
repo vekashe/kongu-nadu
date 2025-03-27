@@ -22,41 +22,6 @@ window.addEventListener('scroll', ()=> {
         scrollActiveEle();
 })
 
-gsap.utils.toArray(".home-hero").forEach(slider => {
-  // Pin each slider section
-  ScrollTrigger.create({
-      trigger: slider,
-      start: "top top",
-      end: "+=100%",
-      pinSpacing: false,
-      pin: true
-  });
-
-  // Scale the image inside the slider on scroll
-  gsap.to(slider.querySelector("img"), {
-      scale: 1.1, // Set the target scale value here
-      scrollTrigger: {
-          trigger: slider,
-          start: "top top",
-          end: "bottom top",
-          scrub: true // Smoothly scrubs between the start and end values
-      }
-  });
-});
-
-var swiper = new Swiper(".heroSwiper", {
-    slidesPerView: 1,
-    effect: 'fade',
-    speed: 1000,
-    autoplay: true,
-    loop: true,
-    disableOnInteraction: false,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-});
-
 var swiper = new Swiper(".homeTesti", {
     slidesPerView: 1,
     speed: 1000,
@@ -166,24 +131,56 @@ el.addEventListener('mouseup', function() {
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.utils.toArray(".home-hero").forEach(slider => {
+  // Pin each slider section
+  ScrollTrigger.create({
+      trigger: slider,
+      start: "top top",
+      end: "+=100%",
+      pinSpacing: false,
+      pin: true
+  });
+
+  // Animate clip-path per slide
+  gsap.to(slider.querySelector("h2"), {
+      clipPath: "inset(0% 0% 0% 0%)",
+      scrollTrigger: {
+          trigger: slider,
+          start: "top center", // Start animation when the slide reaches the center
+          end: "center bottom", // End animation when it leaves the center
+          scrub: true,
+      }
+  });
+
+  gsap.to(slider.querySelector("p"), {
+    clipPath: "inset(0% 0% 0% 0%)",
+    scrollTrigger: {
+        trigger: slider,
+        start: "top center", // Start animation when the slide reaches the center
+        end: "bottom bottom", // End animation when it leaves the center
+        scrub: true,
+    }
+});
+});
+
 gsap.to('.home-video-card', {
   scrollTrigger: {
     trigger: ".home-video",
-    start: "top bottom",
-    end: "center 100px",
-    scrub: 1.5, // Smoothly scrubs between the start and end values
+    start: "top center",
+    end: "+=60%",
+    scrub: 1.2,
   },
-  transform: 'scale(1)',
+  clipPath: "inset(0% 0% 0% 0%)",
 });
 
-gsap.to('.heroSwiper', {
+gsap.to('.home-menu-lft-img img', {
   scrollTrigger: {
-    trigger: ".home-about",
-    start: "top bottom",
-    end: "center 100px",
-    scrub: 1.5, // Smoothly scrubs between the start and end values
+    trigger: ".home-menu",
+    start: "top center",
+    end: "+=30%",
+    scrub: 1.2, // Smoothly scrubs between the start and end values
   },
-  y: 300,
+  clipPath: "inset(0% 0% 0% 0%)",
 });
 
 gsap.to('.home-menu-ryt', {
@@ -191,26 +188,16 @@ gsap.to('.home-menu-ryt', {
     trigger: ".home-menu",
     start: "top bottom",
     end: "center center",
-    scrub: 1.5, // Smoothly scrubs between the start and end values
+    scrub: 1.2, // Smoothly scrubs between the start and end values
   },
   x: 0,
 });
-
-// gsap.to('.home-about-ryt-img1', {
-//   scrollTrigger: {
-//     start: "top bpttom",
-//     end: "top 100px",
-//     scrub: 1.8, // Smoothly scrubs between the start and end values
-//   },
-//   transform: "rotate(-15deg) translateX(0)",
-// });
-
 
 gsap.to('.home-direction-ryt', {
   scrollTrigger: {
     trigger: ".home-direction",
     start: "top bottom",
-    end: "+=100%",
+    end: "+=80%",
     scrub: 1.8, // Smoothly scrubs between the start and end values
   },
   transform: "translateY(-50px)",
@@ -219,9 +206,9 @@ gsap.to('.home-direction-ryt', {
 gsap.to('.home-direction-iframe', {
   scrollTrigger: {
     trigger: ".home-direction",
-    start: "top bottom",
-    end: "+=100%",
+    start: "center bottom",
+    end: "+=80%",
     scrub: 1.8, // Smoothly scrubs between the start and end values
   },
-  transform: "translateY(50px)",
+  clipPath: "inset(0% 0% 0% 0%)",
 });
