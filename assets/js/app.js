@@ -19,10 +19,30 @@ function scrollActiveEle() {
 }
 
 window.addEventListener('scroll', ()=> {
-    setTimeout(()=> {
         scrollActiveEle();
-    }, 500)
 })
+
+gsap.utils.toArray(".home-hero").forEach(slider => {
+  // Pin each slider section
+  ScrollTrigger.create({
+      trigger: slider,
+      start: "top top",
+      end: "+=100%",
+      pinSpacing: false,
+      pin: true
+  });
+
+  // Scale the image inside the slider on scroll
+  gsap.to(slider.querySelector("img"), {
+      scale: 1.1, // Set the target scale value here
+      scrollTrigger: {
+          trigger: slider,
+          start: "top top",
+          end: "bottom top",
+          scrub: true // Smoothly scrubs between the start and end values
+      }
+  });
+});
 
 var swiper = new Swiper(".heroSwiper", {
     slidesPerView: 1,

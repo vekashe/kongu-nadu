@@ -22,17 +22,35 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.49863988"
-     inkscape:cx="421.14562"
-     inkscape:cy="426.15926"
+     inkscape:zoom="0.42231721"
+     inkscape:cx="422.66807"
+     inkscape:cy="704.44678"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="Layer_2" />
+     inkscape:current-layer="g124" />
   <defs
      id="defs1">
+    <rect
+       x="-114.86376"
+       y="-56.722842"
+       width="1508.8276"
+       height="1230.8857"
+       id="rect3" />
+    <rect
+       x="70.190936"
+       y="667.81662"
+       width="330.90013"
+       height="198.54008"
+       id="rect2" />
+    <rect
+       x="667.81662"
+       y="633.72388"
+       width="491.33655"
+       height="208.56735"
+       id="rect1" />
     <style
        id="style1">
       .cls-1 {
@@ -632,54 +650,31 @@
          id="g124">
         <text
            class="cls-1"
-           transform="translate(53.95,740.6)"
-           id="text117"><tspan
-             x="0"
-             y="0"
-             id="tspan117">B</tspan></text>
-        <text
-           class="cls-1"
-           transform="translate(127.85,740.6)"
-           id="text119"><tspan
+           id="text119"
+           x="27.075024"
+           y="738.6355"
+           style="letter-spacing:33.0194px"><tspan
              class="cls-6"
-             x="0"
-             y="0"
-             id="tspan118">Y MADHA</tspan><tspan
-             x="549.03998"
-             y="0"
-             id="tspan119">M</tspan></text>
+             x="27.075024"
+             y="738.6355"
+             id="tspan118"
+             style="letter-spacing:33.0194px">BY</tspan></text>
         <text
            class="cls-1"
-           transform="translate(764.75,740.6)"
-           id="text120"><tspan
-             x="0"
-             y="0"
-             id="tspan120">P</tspan></text>
+           id="text119-6"
+           style="font-size:66.373px;font-family:Calibri, Calibri;letter-spacing:33.1007px;stroke-width:1.00246"
+           x="243.38521"
+           y="738.95099"><tspan
+             class="cls-6"
+             x="243.38521"
+             y="738.95099"
+             id="tspan118-7"
+             style="letter-spacing:33.1007px;stroke-width:1.00246">MADHAMPATTY</tspan></text>
         <text
-           class="cls-1"
-           transform="translate(833.81,740.6)"
-           id="text121"><tspan
-             x="0"
-             y="0"
-             id="tspan121">A</tspan></text>
-        <text
-           class="cls-1"
-           transform="translate(906.67,740.6)"
-           id="text122"><tspan
-             x="0"
-             y="0"
-             id="tspan122">T</tspan></text>
-        <text
-           class="cls-1"
-           transform="translate(979.57,740.6)"
-           id="text124"><tspan
-             class="cls-7"
-             x="0"
-             y="0"
-             id="tspan123">T</tspan><tspan
-             x="72.57"
-             y="0"
-             id="tspan124">Y</tspan></text>
+           xml:space="preserve"
+           transform="matrix(1.0003514,0,0,1.0008226,-1.014729,-1.0095783)"
+           id="text2"
+           style="fill:none;text-orientation:auto;text-align:start;writing-mode:lr-tb;direction:ltr;letter-spacing:33px;white-space:pre;shape-inside:url(#rect3)" />
       </g>
     </g>
   </g>
