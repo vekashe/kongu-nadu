@@ -377,7 +377,7 @@ header {
 }
 
 .footer-two img {
-    /* filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(350deg) brightness(108%) contrast(101%); */
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(350deg) brightness(108%) contrast(101%);
 }
 
 .footer-two::after, .footer-two::before {
