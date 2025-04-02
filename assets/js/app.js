@@ -47,6 +47,14 @@ function menuSwitch(numIndex) {
 
 
 
+function menuDrop(num) {
+  const allDrop = document.querySelectorAll('.menu-list-set');
+  for(let i = 0; i < allDrop.length; i++) {
+    allDrop[i].classList.remove('active');
+  }
+  allDrop[num].classList.add('active');
+}
+
 
 
 
@@ -187,7 +195,7 @@ gsap.to('.about-res-thumb', {
   y: 60,
 });
 
-gsap.to('.about-part-ryt div:nth-child(1)', {
+gsap.to('.about-part-ryt-img:nth-child(1)', {
   scrollTrigger: {
     trigger: ".about-part",
     start: "top bottom",
@@ -197,7 +205,7 @@ gsap.to('.about-part-ryt div:nth-child(1)', {
   clipPath: "inset(0% 0% 0% 0%)",
 });
 
-gsap.to('.about-part-ryt div:nth-child(2)', {
+gsap.to('.about-part-ryt-img:nth-child(2)', {
   scrollTrigger: {
     trigger: ".about-part",
     start: "center bottom",
@@ -214,5 +222,28 @@ gsap.to('.about-reg img', {
     end: "bottom top",
     scrub: 1.3, // Smoothly scrubs between the start and end values
   },
-  scale: 1.2,
+  scale: 1.1,
+});
+
+
+gsap.to('.about-goal-card:nth-child(1)', {
+  scrollTrigger: {
+    trigger: ".about-goal",
+    start: "top bottom",
+    end: "center center",
+    scrub: 1.3, // Smoothly scrubs between the start and end values
+  },
+  clipPath: "inset(0% 0% 0% 0%)",
+  transform: "translateX(0)",
+});
+
+gsap.to('.about-goal-card:nth-child(2)', {
+  scrollTrigger: {
+    trigger: ".about-goal",
+    start: "top bottom",
+    end: "center center",
+    scrub: 1.3, // Smoothly scrubs between the start and end values
+  },
+  clipPath: "inset(0% 0% 0% 0%)",
+  transform: "translateX(0)",
 });
