@@ -12,7 +12,7 @@ html {
 
 body {
     font-family: jost;
-    background-color: #031817;
+    background-color: #000;
     color: #fff;
 }
 
@@ -23,6 +23,19 @@ a, button {
     text-decoration: unset;
     outline: unset;
     cursor: pointer;
+}
+
+h2 {
+    font-family: Lora;
+    font-size: 48px;
+    font-weight: 400;
+    color: #b18745;
+}
+
+h2 {
+    font-family: Lora;
+    font-size: 24px;
+    font-weight: 400;
 }
 
 .custom-container {
@@ -247,10 +260,6 @@ header {
     color: #b18745;
 }
 
-.footer-one-set:nth-child(1) {
-    width: 40%;
-}
-
 .footer-one-set {
     width: 25%;
     display: flex;
@@ -258,14 +267,36 @@ header {
     gap: 1.5rem;
 }
 
+.footer-one-set .home-menu-seal {
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    transform: scale(1.3);
+}
+
 .footer-one-set img {
     filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(350deg) brightness(108%) contrast(101%);
 }
 
-.footer-one-set div {
+.footer-one-set > div {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+}
+
+.footer-one-set-soc {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.footer-one-set-soc a {
+    line-height: 0;
+}
+
+.footer-one-set-soc img {
+    height: 1.1rem;
 }
 
 .footer-one-set p {
@@ -285,7 +316,7 @@ header {
     width: 90%;
     margin: auto;
     padding: 1rem 0;
-    border-top: 1px solid #cbae7f;
+    border-top: 1px solid #b18745;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -374,7 +405,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #031817;
+    background-color: #000;
     position: relative;
     z-index: 3;
     overflow: hidden;
@@ -397,6 +428,9 @@ header {
 
 .home-about-lft img {
     width: 100%;
+    aspect-ratio: 290 / 364;
+    object-fit: cover;
+    object-position: center;
 }
 
 .home-about-cntr {
@@ -415,10 +449,6 @@ header {
     font-weight: 400;
 }
 
-.home-about-cntr p {
-    color: #888;
-}
-
 .home-about-cntr p span {
     color: #000;
 }
@@ -432,6 +462,9 @@ header {
 
 .home-about-ryt img {
     width: 100%;
+    aspect-ratio: 290 / 364;
+    object-fit: cover;
+    object-position: center;
 }
 
 .home-about-ryt img:nth-child(1) {
@@ -455,7 +488,7 @@ header {
 .home-menu {
     padding: 8rem 0;
     overflow: hidden;
-    background-color: #0C2524;
+    background-color: #061111;
 }
 
 .home-menu .custom-container {
@@ -490,13 +523,20 @@ header {
 .home-menu-lft-img img {
     width: 100%;
     clip-path: inset(0 100% 0 0);
+    aspect-ratio: 5 / 6;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home-menu-lft .home-menu-seal {
+    position: absolute;
+    transform: translateX(-50%);
+
 }
 
 .home-menu-seal {
-    position: absolute;
     bottom: 2rem;
     left: 0;
-    transform: translateX(-50%);
     width: 107px;
     height: 107px;
     border-radius: 50%;
@@ -626,6 +666,11 @@ header {
     transform: rotate(-180deg);
 }
 
+.home-menu-ryt .home-menu-card {
+    aspect-ratio: 16 / 9;
+    overflow-y: scroll;
+}
+
 .home-menu-card {
     display: flex;
     flex-direction: column;
@@ -639,6 +684,7 @@ header {
     position: relative;
     overflow: hidden;
     padding: 2rem 0;
+    min-height: 101px;
     border-bottom: 1px solid #888;
     justify-content: flex-end;
     transition: all 0.3s ease;
@@ -853,7 +899,7 @@ header {
 
 .home-direction {
     padding: 8rem 0;
-    background-color: #0C2524;
+    background-color: #061111;
 }
 
 .home-direction .custom-container {
@@ -867,7 +913,7 @@ header {
 .home-direction iframe {
     max-width: 450px;
     width: 36%;
-    aspect-ratio: 10 / 14;
+    aspect-ratio: 1 / 1;
     border: unset;
     outline: unset;
     filter: grayscale(1);
@@ -908,7 +954,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #0C2524;
+    background-color: #061111;
     position: relative;
 }
 
@@ -943,7 +989,7 @@ header {
 
 .about-res {
     padding: 0 0 12rem 0;
-    background-color: #0C2524;
+    background-color: #061111;
 }
 
 .about-res .custom-container {
@@ -1130,8 +1176,8 @@ header {
 
 
 .about-goal {
-    padding: 12rem 0;
-    background-color: #0C2524;
+    padding: 8rem 0;
+    background-color: #061111;
 }
 
 .about-goal .custom-container {
@@ -1192,7 +1238,7 @@ header {
 
 .menu-list {
     padding: 0 0 8rem;
-    background-color: #0C2524;
+    background-color: #061111;
 }
 
 .menu-list .custom-container {
