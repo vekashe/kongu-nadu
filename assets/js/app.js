@@ -208,8 +208,8 @@ gsap.to('.about-part-ryt-img:nth-child(1)', {
 gsap.to('.about-part-ryt-img:nth-child(2)', {
   scrollTrigger: {
     trigger: ".about-part",
-    start: "center bottom",
-    end: "bottom bottom",
+    start: "top center",
+    end: "+=60%",
     scrub: 1.3, // Smoothly scrubs between the start and end values
   },
   clipPath: "inset(0% 0% 0% 0%)",
@@ -257,3 +257,44 @@ gsap.to('.order-online-lft img', {
   },
   clipPath: "inset(0% 0% 0% 0%)",
 });
+
+gsap.to('.order-online-set:nth-child(1)', {
+  scrollTrigger: {
+    trigger: ".order-online",
+    start: "top bottom",
+    end: "+=70%",
+    scrub: 1.3, // Smoothly scrubs between the start and end values
+  },
+  transform: "translateX(0)",
+});
+
+gsap.to('.order-online-set:nth-child(2)', {
+  scrollTrigger: {
+    trigger: ".order-online",
+    start: "top bottom",
+    end: "+=90%",
+    scrub: 1.3, // Smoothly scrubs between the start and end values
+  },
+  transform: "translateX(0)",
+});
+
+
+
+
+
+
+function scrollButtonDown() {
+  const getHeight = document.querySelector('.home-menu-card');
+  getHeight.scrollBy({
+    top: getHeight.clientHeight, // Corrected
+    behavior: "smooth",
+  });
+}
+
+function scrollButtonUp() {
+  const getHeight = document.querySelector('.home-menu-card');
+  getHeight.scrollBy({
+    top: -getHeight.clientHeight, // Corrected (negative value to scroll up)
+    behavior: "smooth",
+  });
+}
