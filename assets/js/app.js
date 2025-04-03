@@ -247,3 +247,13 @@ gsap.to('.about-goal-card:nth-child(2)', {
   clipPath: "inset(0% 0% 0% 0%)",
   transform: "translateX(0)",
 });
+
+gsap.to('.order-online-lft img', {
+  scrollTrigger: {
+    trigger: ".order-online",
+    start: "top center",
+    end: "+=30%",
+    scrub: 1.2, // Smoothly scrubs between the start and end values
+  },
+  clipPath: "inset(0% 0% 0% 0%)",
+});
