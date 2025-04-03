@@ -237,6 +237,7 @@ header {
 .footer-one-set-soc {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     gap: 1.5rem;
     margin-top: 1rem;
 }
@@ -251,7 +252,6 @@ header {
 
 .footer-one-set p {
     max-width: 220px;
-    width: 100%;
 }
 
 .footer-one-set h2 {
@@ -446,6 +446,7 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .home-menu-lft {
@@ -653,7 +654,7 @@ header {
 
 .home-menu-ryt .home-menu-card {
     aspect-ratio: 16 / 9;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 .home-menu-card {
@@ -1568,4 +1569,49 @@ header {
 
 .order-online-set a {
     margin-top: 1rem;
+}
+
+
+
+
+
+
+
+.coming-soon {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.coming-soon h1 {
+    font-size: 64px;
+    font-family: Lora;
+    font-weight: 400;
+    position: relative;
+    z-index: 5;
+}
+
+.coming-soon h1 span {
+    color: #b18745;
+}
+
+.coming-soon img {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    opacity: 0.4;
+    filter: brightness(140%);
+    border-radius: 50%;
+    width: 90%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
 }
