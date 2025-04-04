@@ -18,6 +18,10 @@ function scrollActiveEle() {
   }
 }
 
+function hamburgerToggle() {
+  document.querySelector('.header').classList.toggle('open');
+}
+
 window.addEventListener('scroll', () => {
   scrollActiveEle();
 });
@@ -77,7 +81,7 @@ gsap.utils.toArray(".home-hero").forEach(slider => {
     scrollTrigger: {
       trigger: slider,
       start: "top center", // Start animation when the slide reaches the center
-      end: "center bottom", // End animation when it leaves the center
+      end: "top bottom", // End animation when it leaves the center
       scrub: true,
     }
   });
@@ -87,16 +91,26 @@ gsap.utils.toArray(".home-hero").forEach(slider => {
     scrollTrigger: {
       trigger: slider,
       start: "top center", // Start animation when the slide reaches the center
-      end: "bottom bottom", // End animation when it leaves the center
+      end: "top bottom", // End animation when it leaves the center
       scrub: true,
     }
   });
 });
 
+gsap.to('.inner-banner img:nth-child(3)', {
+  scrollTrigger: {
+    trigger: ".inner-banner",
+    start: "top top",
+    end: "+=100%",
+    scrub: 1.2,
+  },
+  scale: 1.15,
+});
+
 gsap.to('.home-video-card', {
   scrollTrigger: {
     trigger: ".home-video",
-    start: "top center",
+    start: "top bottom",
     end: "+=60%",
     scrub: 1.2,
   },

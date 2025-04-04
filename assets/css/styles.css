@@ -180,6 +180,63 @@ header {
     color: #b18745;
 }
 
+.hamburger-btn {
+    width: 29px;
+    height: 23px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.header.open .hamburger-btn {
+    height: 29px;
+}
+
+.hamburger-btn span {
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-btn span:nth-child(1) {
+    background-image: linear-gradient(to right, #b18745 50%, #0000 50%);
+}
+
+.hamburger-btn span:nth-child(2) {
+    background-color: #b18745;
+}
+
+.hamburger-btn span:nth-child(3) {
+    background-image: linear-gradient(to left, #b18745 50%, #0000 50%);
+}
+
+.header.open .hamburger-btn span:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 9px);
+}
+
+.header.open .hamburger-btn span:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.header.open .hamburger-btn span:nth-child(3) {
+    transform: rotate(45deg) translate(-10px, -10px);
+}
+
+.menu-shadow {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+    display: none;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    background-color: #0007;
+    backdrop-filter: blur(8px);
+}
+
 
 
 
@@ -238,6 +295,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     gap: 1.5rem;
     margin-top: 1rem;
 }
@@ -304,7 +362,7 @@ header {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    filter: brightness(0.8);
+    filter: brightness(0.6);
 }
 
 .home-hero-content {
@@ -391,12 +449,6 @@ header {
     gap: 2rem;
     max-width: 700px;
     width: calc(50% - 2rem);
-}
-
-.home-about-cntr h2 {
-    font-size: 48px;
-    font-family: Lora;
-    font-weight: 400;
 }
 
 .home-about-cntr p span {
@@ -558,9 +610,6 @@ header {
 }
 
 .home-menu-btn h2 {
-    font-size: 48px;
-    font-weight: 400;
-    font-family: Lora;
     transition: all 0.3s ease;
 }
 
@@ -626,8 +675,6 @@ header {
     filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(350deg) brightness(108%) contrast(101%);
     transform: translateY(1px);
 }
-
-
 
 .home-menu-drop {
     display: none;
@@ -715,6 +762,7 @@ header {
     display: flex;
     gap: 2rem;
     align-items: center;
+    justify-content: space-between;
 }
 
 .home-menu-title h3 {
@@ -734,6 +782,7 @@ header {
 }
 
 .home-menu-title span {
+    display: none;
     width: 100%;
     height: 1px;
     border: 1px dashed #fff;
@@ -766,8 +815,6 @@ header {
 }
 
 .home-video .custom-container > h2 {
-    font-family: Lora;
-    font-weight: 400;
     font-size: 12vw;
     line-height: 1;
     color: #0000;
@@ -900,6 +947,7 @@ header {
 
 
 .home-direction {
+    overflow: hidden;
     padding: 8rem 0;
     background-color: #0a0e14;
 }
@@ -923,8 +971,8 @@ header {
 }
 
 .home-direction-ryt {
-    /* max-width: 650px; */
-    width: 70%;
+    max-width: 700px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -934,9 +982,6 @@ header {
 
 .home-direction-ryt h2 {
     max-width: 500px;
-    font-size: 48px;
-    font-family: Lora;
-    font-weight: 400;
     text-align: center;
 }
 
@@ -951,6 +996,7 @@ header {
 
 
 .inner-banner {
+    width: 100%;
     padding: 10rem 0;
     margin: auto;
     display: flex;
@@ -960,6 +1006,7 @@ header {
     background-color: #0a0e14;
     position: relative;
     aspect-ratio: 16 / 8;
+    overflow: hidden;
 }
 
 .inner-banner h1 {
@@ -1051,12 +1098,6 @@ header {
     margin-left: 5rem;
 }
 
-.about-res-content h2 {
-    font-size: 48px;
-    font-family: Lora;
-    font-weight: 400;
-}
-
 .about-res-content p {
     margin-top: 2rem;
     line-height: 1.7;
@@ -1109,12 +1150,6 @@ header {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-}
-
-.about-part-lft h2 {
-    font-size: 48px;
-    font-weight: 400;
-    font-family: Lora;
 }
 
 .about-part-lft p {
@@ -1219,12 +1254,6 @@ header {
     gap: 5rem;
 }
 
-.about-goal .custom-container h2 {
-    font-size: 48px;
-    font-weight: 400;
-    font-family: Lora;
-}
-
 .about-goal-content {
     display: flex;
     flex-direction: row;
@@ -1282,8 +1311,9 @@ header {
 }
 
 .menu-list .custom-container {
-    columns: 250px 2;
+    columns: 548px 2;
     gap: 12px 6rem;
+    align-items: center;
 }
 
 .menu-list-set {
@@ -1321,8 +1351,6 @@ header {
 
 .menu-list-set > h2 {
     font-size: 24px;
-    font-weight: 400;
-    font-family: Lora;
     color: #fff;
     display: flex;
     flex-direction: row;
@@ -1595,6 +1623,7 @@ header {
     font-weight: 400;
     position: relative;
     z-index: 5;
+    text-align: center;
 }
 
 .coming-soon h1 span {
