@@ -1,5 +1,5 @@
 const lenis = new Lenis({
-  duration: 1.5, // Duration for smooth scroll
+  duration: 1.3, // Duration for smooth scroll
   smoothWheel: true, // Enable smooth wheel scrolling
   smoothTouch: true, // Enable smooth touch scrolling (for mobile)
 });

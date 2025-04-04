@@ -1396,7 +1396,7 @@ header {
     align-items: center;
     justify-content: center;
     background-color: #0a0e14;
-    padding: 8rem 0 0;
+    padding: 0 0 8rem;
     line-height: 0;
 }
 
@@ -1433,6 +1433,10 @@ header {
     flex-direction: column;
     gap: 3rem;
     width: calc(45% - 4rem);
+}
+
+.contact-main-lft-mb {
+    display: none;
 }
 
 .contact-main-lft > div {
